@@ -91,6 +91,7 @@ body{
     left: 28px;
     top: -20px;
     user-select: none;
+
 }
 
 .contenar-Add{
@@ -114,6 +115,8 @@ body{
   outline: none;
   resize: none; /* لو مش عايز المستخدم يغيره بإيده */
   overflow: hidden;
+  line-height: 40px;
+  
 }
 
 
@@ -550,6 +553,9 @@ body{
 }
 .input{
   height: 35px;
+  line-height: 30px;
+  font-size: 19px;
+
 }
 .button{
   width: 100px;
