@@ -1,5 +1,6 @@
 // context/TaskContext.js
 import { createContext, useState, useEffect, useRef } from "react";
+import { toast } from "sonner";
 
 export const TaskContext = createContext();
 
@@ -31,6 +32,7 @@ export default function TaskProvider({ children }) {
       name: taskName,
       completed: false,
     };
+    toast.success("تم اضافه مهمه بنجاح")
     setTasks([...tasks, newTask]);
   };
 
@@ -47,6 +49,8 @@ export default function TaskProvider({ children }) {
     setToggleOpen(false);
     setOpen(false);
     setTaskSelected(null);
+    toast.success("تم حزف المهمة بنجاح")
+
   };
 
   const EditTask = (id, newName) => {
@@ -57,6 +61,8 @@ export default function TaskProvider({ children }) {
     );
     setEdit(false);
     setTaskSelected(null);
+        toast.success("تم تعديل المهمة بنجاح")
+
   };
 
   return (
